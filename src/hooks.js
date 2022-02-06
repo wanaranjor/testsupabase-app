@@ -24,7 +24,6 @@ export const handle = async ({ event, resolve }) => {
 
   // if auth request - set cookie in response headers
   if (event.request.method === 'POST' && event.url.pathname === '/api/auth.json') {
-    console.log(event.request.method);
     auth.api.setAuthCookie(event, toExpressResponse(response));
     response = toSvelteKitResponse(response);
   }
