@@ -6,10 +6,10 @@ import * as cookie from 'cookie';
  * @param {Express.Request} req
  * @returns Express.Request
  */
-export function toExpressRequest(event) {
+export function toExpressRequest(req) {
   return {
-    ...event,
-    cookies: cookie.parse(event.request.headers.cookie || '')
+    ...req,
+    cookies: cookie.parse(req.request.headers.cookie || '')
   };
 }
 

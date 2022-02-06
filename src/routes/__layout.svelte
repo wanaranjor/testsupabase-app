@@ -16,54 +16,15 @@
 	});
 </script>
 
-<Header>
-	<main>
-		<slot />
-	</main>
+<Header />
+<main class="container mx-auto">
+	<slot />
+</main>
 
-	<footer>
-		<p>
-			visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit
-		</p>
-		<h2>Session Data</h2>
-		<pre>{JSON.stringify($session, null, 2)}</pre>
-	</footer>
-
-	<style>
-		main {
-			flex: 1;
-			display: flex;
-			flex-direction: column;
-			padding: 1rem;
-			width: 100%;
-			max-width: 1024px;
-			margin: 0 auto;
-			box-sizing: border-box;
-		}
-
-		footer {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			padding: 40px;
-		}
-
-		footer a {
-			font-weight: bold;
-		}
-
-		footer pre {
-			max-width: 1024px;
-			word-wrap: break-word;
-			white-space: pre-wrap;
-		}
-
-		@media (min-width: 480px) {
-			footer {
-				padding: 40px 0;
-			}
-		}
-	</style>
-</Header>
-<slot />
+<footer class="container mx-auto">
+	<p>
+		visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit
+	</p>
+	<h2>Session Data</h2>
+	<pre>{JSON.stringify($session, null, 2)}</pre>
+</footer>

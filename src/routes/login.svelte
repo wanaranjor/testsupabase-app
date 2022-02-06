@@ -33,14 +33,15 @@
 	<title>Login</title>
 </svelte:head>
 
-<div class="content">
+<div class="container mx-auto">
 	<h1>Login</h1>
 
 	<form on:submit|preventDefault={loginUser}>
-		<div>
+		<div class="">
 			<input
 				id="email"
 				type="email"
+				class="bg-gray-300 mb-2"
 				autocomplete="email"
 				placeholder="Email"
 				required
@@ -51,41 +52,16 @@
 			<input
 				id="password"
 				type="password"
+				class="bg-gray-300"
 				placeholder="Password (optional)"
 				bind:value={password}
 			/>
 		</div>
 
 		<div>
-			<button type="submit" class="submit" disabled={loading}>
+			<button type="submit" class="bg-yellow-500 my-3 p-2" disabled={loading}>
 				{loading ? 'Loading ...' : 'Log In'}
 			</button>
 		</div>
-
-		<div>
-			<a sveltekit:prefetch href="/register">No account? Register here</a>
-		</div>
 	</form>
 </div>
-
-<style>
-	.content {
-		width: 100%;
-		max-width: var(--column-width);
-		margin: var(--column-margin-top) auto 0 auto;
-	}
-
-	.submit {
-		border-radius: 20px;
-		border: 1px solid var(--accent-color);
-		background-color: var(--accent-color);
-		color: #fff;
-		font-size: 12px;
-		font-weight: bold;
-		padding: 12px 45px;
-		letter-spacing: 1px;
-		text-transform: uppercase;
-		transition: transform 80ms ease-in;
-		cursor: pointer;
-	}
-</style>

@@ -15,9 +15,10 @@ export const handle = async ({ event, resolve }) => {
   }
 
   // TODO https://github.com/sveltejs/kit/issues/1046
-  if (event.url.searchParams.has('_method')) {
-    event.request.method = event.url.searchParams.get('_method').toUpperCase();
-  }
+  // if (event.url.searchParams.has('_method')) {
+
+  //   event.request.method = event.url.searchParams.getget('_method').toUpperCase();
+  // }
 
   let response = await resolve(event);
 

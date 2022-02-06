@@ -12,10 +12,10 @@
 	"devDependencies": {
 		"@fontsource/fira-mono": "^4.5.2",
 		"@supabase/supabase-js": "^1.30.0",
-		"cookie": "^0.4.2",
 		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/kit": "next",
+		"@sveltejs/kit": "^1.0.0-next.260",
 		"autoprefixer": "^10.4.2",
+		"cookie": "^0.4.2",
 		"eslint": "^7.32.0",
 		"eslint-config-prettier": "^8.3.0",
 		"eslint-plugin-svelte3": "^3.2.1",
